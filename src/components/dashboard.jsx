@@ -1,4 +1,4 @@
-import { Phone, TrendingUp, Activity, Clock } from "lucide-react";
+import { Phone, TrendingUp, Activity, Clock, ChevronDown } from "lucide-react";
 import Sidebar from "./Sidebar";
 
 export default function Dashboard() {
@@ -104,25 +104,18 @@ export default function Dashboard() {
               </p>
             </div>
 
-            <select className="border rounded-lg px-3 py-1 text-sm">
-              <option>Derniers 3 mois</option>
-              <option>30 jours</option>
-              <option>7 jours</option>
-            </select>
+            <div class="paste-button">
+            <button class="button px-[15px] rounded-2xl cursor-pointer py-2.5 flex items-center justify-between bg-linear-to-r from-[#A068C1]/80 to-[#BD3E69]/80 font-semibold">Derniers 3 mois &nbsp; <ChevronDown size={12} /> </button>
+            <div class="dropdown-content bg-linear-to-r from-[#A068C1]/80 to-[#BD3E69]/80 p-0.5">
+            <div className="bg-[#212121] rounded-2xl">
+              <a id="top" href="#">Derniers 3 mois</a>
+              <a id="middle" href="#">30 jours</a>
+              <a id="bottom" href="#">7 jours</a>
+            </div>
+            </div>
           </div>
-
-          {/* Fake chart bars */}
-          <div className="flex items-end gap-2 h-40">
-            {[40, 80, 120, 60, 100, 50, 90, 30].map((h, i) => (
-              <div
-                key={i}
-                style={{ height: `${h}px` }}
-                className="w-4 bg-indigo-500 rounded-md"
-              />
-            ))}
           </div>
         </div>
-
       </main>
     </div>
   );
