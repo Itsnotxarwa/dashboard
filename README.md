@@ -33,4 +33,4 @@ npm install
 npm run dev
 
 
-Open http://localhost:5173 in your browser to view the dashboard.
+Open http://localhost:5173/dashboard in your browser to view the dashboard.
