@@ -1,5 +1,6 @@
 import { Phone, TrendingUp, Activity, Clock, ChevronDown } from "lucide-react";
 import Sidebar from "./Sidebar";
+import Chart from "./Chart";
 
 export default function Dashboard() {
   return (
@@ -17,7 +18,7 @@ export default function Dashboard() {
         </div>
 
         {/* Top cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
 
           <div className="bg-linear-to-b from-[#0B0F1A] to-[#A068C1]/80 border border-gray-500 p-5 backdrop-blur-2xl rounded-xl">
             <p className="text-sm text-white flex gap-3 items-center mb-4">
@@ -25,7 +26,7 @@ export default function Dashboard() {
               Mon IA téléphonique
             </p>
             <p className="text-xs text-nowrap mb-4">Appelez directement votre agent IA</p>
-            <p className="font-semibold mt-1">+33 1 59 ****</p>
+            <p className="font-semibold mt-1 text-xl">+33 1 59 ****</p>
             <button className="mt-4 w-full bg-linear-to-r from-[#A068C1]/80 to-[#BD3E69]/80 shadow-lg text-white py-2 rounded-lg text-sm hover:scale-105">
               Contacter l’IA
             </button>
@@ -67,7 +68,7 @@ export default function Dashboard() {
               <span>Temps Cumulée</span> 
               <Clock size={12} />
             </p>
-            <p className="flex gap-1 items-center text-xs text-white/20 mt-2">
+            <p className="flex gap-1 items-center text-xs text-white/50 mt-2">
               <span>Minutes depuis le début</span> 
             </p>
           </div>
@@ -87,7 +88,7 @@ export default function Dashboard() {
               <span>Temps par conversation</span> 
               <Clock size={12} />
             </p>
-            <p className="flex gap-1 items-center text-xs text-white/20 mt-2">
+            <p className="flex gap-1 items-center text-xs text-gray-500 mt-2">
               <span>Durée moyenne ce mois</span> 
             </p>
           </div>
@@ -114,6 +115,9 @@ export default function Dashboard() {
             </div>
             </div>
           </div>
+          </div>
+          <div>
+          <Chart />
           </div>
         </div>
       </main>
